@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Sen&display=swap" rel="stylesheet">
+    <title>Donate</title>
+</head>
+<body>
+    <header>
+        <h1 class="h1-home"> Charity Group </h1>
+    </header>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="drop-button">Products</button>
+            <div class="dropdown-categories">
+                <a href="Products.html">Product 1</a>
+                <a href="Products.html">Product 2</a>
+                <a href="Products.html">Product 3</a>
+            </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <main> 
+        <section>
+            <h1>Please donate to us</h1>
+            <br>
+            <img src="https://orphancare.org.my/wp-content/uploads/2021/07/Rectangle-221.png" alt="hand-donate-image" style="max-width: 300px; max-height: 300px">
+        </section>
+        
+        <section>
+            <h3 id="amount-raised-text"></h3>
+
+            <div id="foundation-progress">
+                <div id="foundation-progress-bar">0%</div>
+            </div>
+        </section>
+        
+        <section>
+            <p>Feel free to choose your desired amount below.</p>
+            <button class="donate-btn" onclick="donate(10)"><p>Donate 10kr</p></button> 
+            <button class="donate-btn" onclick="donate(15)">Donate 15kr</button> 
+            <button class="donate-btn" onclick="donate(20)">Donate 20kr</button> 
+        </section>
+        
+        <article> 
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Iste reprehenderit libero distinctio atque neque dolore molestias alias? 
+            A, odit eius quasi alias assumenda aut eligendi tempore. Error, magni totam?
+            Sequi provident qui, non consequatur eaque tempora ab repellendus!
+            Facere voluptas atque maiores libero debitis possimus aut quo vitae minus quidem.
+        </article>
+        
+    </main>
+
+    <footer>
+        <p> &copy; 2022 Charity Group</p>
+    </footer>
+
+    <script>
+    // elements
+    var elemBar = document.getElementById("foundation-progress-bar");
+    var amountRaisedText = document.getElementById("amount-raised-text");
+    
+    // variables for donate bar
+    var amountDonated = 0;
+    var amountDonatedPrecentage = 0;
+    var amountGoal = 200;
+    
+    // update text
+    amountRaisedText.innerHTML = amountDonated.toString() + "kr raised of total " + amountGoal.toString() + "kr";
+
+    function donate(amount) {
+        // calculate total donated
+        amountDonated = parseInt(amount) + amountDonated;
+        amountDonatedPrecentage = (amountDonated / amountGoal) * 100;
+
+        // update text
+        amountRaisedText.innerHTML = amountDonated.toString() + "kr raised of total " + amountGoal.toString() + "kr";
+        if (amountDonated < amountGoal) {
+            elemBar.style.width = amountDonatedPrecentage.toString() + "%";
+            elemBar.innerHTML = amountDonatedPrecentage.toString() + "%";
+        } else {
+            elemBar.style.width = "100%";
+            elemBar.innerHTML = amountDonatedPrecentage.toString() + "%";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+body {
+    background-color:white;
+    padding-bottom: 200px; 
+}
+
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color: white;
+    color: black;
+}
+
+/*NAVBAR CSS*/
+
+.navbar {
+    overflow:auto; /*hidden*/
+    background-color:antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar a{
+    float:left;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    padding: 1.1rem;
+    text-decoration: none;/*ta bort pga accessibility?*/
+}
+
+.dropdown .drop-button{
+    font-size: 18px;
+    border:none;
+    outline:none;/*Vad gör denna?*/
+    padding:1.1rem;
+    background-color: inherit;
+    font-family: inherit;
+    margin:0;
+
+}
+
+.dropdown-categories a{
+    float: none; /*la dem under varandra ist f på en rad*/
+    display: block;
+    padding:1.1rem;
+    text-decoration:none;
+    background-color: aliceblue;
+    box-shadow: 1px 1px 3px 0px;
+    opacity:0.8;
+    text-align: left;
+    min-width:140px;
+    z-index: 1;
+}
+
+.navbar a:hover, .drop-button, .dropdown:hover{
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+.dropdown{
+    float: left;
+    overflow:hidden;
+    font-size: 26px;  
+  
+}
+
+.dropdown-categories{
+    display:none;
+    position: absolute; /*håller Products stilla när man hovrar över den */
+}
+
+.dropdown:hover .dropdown-categories {
+    display: block;
+  }
+
+.navbar a:last-child{
+    float:right;
+}
+
+/*END OF NAVBAR*/
+
+ img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+  }
+  
+  section {
+    display:block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    padding: 2rem 2rem 2rem 2rem; 
+    text-align: center;
+    background-color: antiquewhite;
+    color: black;
+}
+
+/*PRODUCTS_PAGE*/
+.products-aside{
+    float:left;
+    border-style: solid;
+    padding: 20px 10px 30px 10px;
+    border-width: 8px;
+    border-radius: 10px;
+}
+
+.products-container{
+    display:flex;
+    /*flex:wrap;*/
+    flex-flow: row wrap;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.product-card{
+    display:block;
+    flex-basis: 25%;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    padding: 1rem; 
+}
+
+.products-container > a{
+    color: black;
+    border-radius: 10px;
+}
+
+.products-container > a:hover{
+    background-color: grey;
+    color: white;
+}
+
+/*END OF PRODUCTS PAGE*/
+
+.newspaper {
+    column-count: 5;
+    column-gap: 20px;
+    column-rule: none;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}  
+fieldset {
+    background-color: #eeeeee;
+    margin-right: 75%;
+    margin-bottom: 3%;
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+  }
+  
+  input {
+    margin: 5px;
+  }    
+
+/*INDEXPAGE*/
+
+.image-home > img {
+    display: block;
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h1-home {
+
+    text-align: center;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 52px;
+    background-color: antiquewhite;
+    width:35%;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 52px;
+    background-color: antiquewhite;
+    width:100%;
+    padding-top: 2rem;
+}
+
+.our-mission {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.our-mission h2 {
+    font-size: 36px;
+}
+
+.article-home {
+    padding: 2rem 2rem 2rem 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 60%;
+}
+
+/*END OF INDEX-PAGE CSS*/
+
+/*Contact us ccs */
+.full {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    bottom: 0;
+    
+  }
+  .fullform {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin:auto;
+    text-align: center;
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 100px;
+    height: auto; /* Should be removed. Only for demonstration */
+    text-align: center;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Donate.html */
+
+#foundation-progress {
+width: 100%;
+background-color: #ddd;
+}
+
+#foundation-progress-bar {
+width: 0%;
+height: 30px;
+background-color: #04AA6D;
+text-align: center;
+line-height: 30px;
+color: black;
+}
+
+.donate-btn {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color :red;
+  color: black;
+  box-shadow: darkred;
+}
+
+.donate-btn:hover {
+background-color: #CF2500;
+}
+
+/* End of donate.html */
+  
+/* about page*/
+.h2-about {
+    text-align: center;
+}
+
+.img-about{
+    display: block; 
+    margin-right: auto; 
+    margin-left: auto;
+}
+/* about page*/
