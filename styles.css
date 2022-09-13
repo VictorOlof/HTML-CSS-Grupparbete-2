@@ -248,13 +248,32 @@ fieldset {
     text-align: center;
   }
 
-  .column {
+  .columncontact {
     float: left;
     width: 33.33%;
-    padding: 100px;
+    padding: 0.9rem;
     height: auto; /* Should be removed. Only for demonstration */
     text-align: center;
   }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .icon_body{
+    transition: transform 0.5s ease-in;
+}
+
+.icon_body > g > rect {
+    transition: fill 1s ease-in;
+}
+
+.icon_body:hover {
+    transform: rotate(359deg);
+}
+
   
   /* Clear floats after the columns */
   .row:after {
@@ -304,3 +323,13 @@ background-color: #CF2500;
     margin-left: auto;
 }
 /* about page*/
+
+/* media querrys*/
+@media screen and (max-width: 600px) {
+    .columncontact {
+      width: 100%;
+    }
+  }
+
+
+  /* media querrys*/
