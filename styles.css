@@ -325,11 +325,22 @@ background-color: #CF2500;
 /* about page*/
 
 /* media querrys*/
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .columncontact {
       width: 100%;
     }
+    .newspaper {
+        column-count: 1;    
+    }
   }
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
+    .columncontact {
+        width: 100%;
+      }
+      .newspaper {
+          column-count: 2;    
+      }
+  } 
 
 
   /* media querrys*/
