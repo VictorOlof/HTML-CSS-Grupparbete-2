@@ -26,69 +26,73 @@ header {
 
 /*NAVBAR CSS*/
 
-.navbar {
-    overflow:auto; /*hidden*/
-    background-color:antiquewhite;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.menu-icon {
+    border: solid black 1px;
+    width: 2.6rem;
+    align-items: flex-end;
+    border-radius: 5px;
+    margin: 0.6rem;
 }
 
-.navbar a{
-    float:left;
-    text-align: center;
-    font-size: 18px;
-    color: black;
-    text-align: center;
-    padding: 1.1rem;
-    text-decoration: none;/*ta bort pga accessibility?*/
+.menu-icon:hover {
+    cursor: pointer;
+    background-color: lightcoral;
 }
 
-.dropdown .drop-button{
-    font-size: 18px;
-    border:none;
-    outline:none;/*Vad gör denna?*/
-    padding:1.1rem;
-    background-color: inherit;
-    font-family: inherit;
-    margin:0;
-
+.bar1, .bar2, .bar3{
+    margin:0.4rem;
+    border-style: solid;
+    border-color:black;
+    border-top:0.2rem;
 }
 
-.dropdown-categories a{
-    float: none; /*la dem under varandra ist f på en rad*/
-    display: block;
+.navbar:hover {
+    overflow:hidden;
+}
+
+.navbar:hover .dropdown{ /*visar undermenyn*/
+    display:block;
+}
+
+.dropdown {
+    position: absolute;
+    display: none;
+    font-size: 2.2rem;
+    width: 75vw;
+    border: black solid 0.1rem;
+    border-radius: 5px;
     padding:1.1rem;
     text-decoration:none;
     background-color: aliceblue;
     box-shadow: 1px 1px 3px 0px;
-    opacity:0.8;
-    text-align: left;
-    min-width:140px;
-    z-index: 1;
+    opacity:0.9;
+    font-family: inherit;
 }
 
-.navbar a:hover, .drop-button, .dropdown:hover{
-    background-color: lightcoral;
-    cursor: pointer;
+.second-dropdown {
+    display: none;
+    font-size: 1.5rem;
+    border: black solid 0.1rem;
+    border-radius: 5px;
+    font-size: inherit;
+    font-family: inherit;
 }
 
-.dropdown{
-    float: left;
-    overflow:hidden;
-    font-size: 26px;  
-  
-}
-
-.dropdown-categories{
-    display:none;
-    position: absolute; /*håller Products stilla när man hovrar över den */
-}
-
-.dropdown:hover .dropdown-categories {
+.products-nav:hover .second-dropdown {
     display: block;
-  }
+}
 
-.navbar a:last-child{
-    float:right;
+.dropdown a {
+    float: none;
+    display: block;
+    text-decoration:none;
+    color:black;
+}
+
+.second-dropdown a {
+    float: none;
+    display: block;
+    text-decoration:none;
 }
 
 /*END OF NAVBAR*/
