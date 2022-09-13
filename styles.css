@@ -24,16 +24,6 @@ header {
 
 /*NAVBAR CSS*/
 
-/*
-.menu-icon {
-    border: solid black 1px;
-    width: 2.6rem;
-    height:2.2rem;
-    border-radius: 5px;
-    margin: 0.6rem;
-}
-*/
-
 #nav-svg{
     fill:#f08080;
     stroke:black;
@@ -41,13 +31,10 @@ header {
     opacity:0.9
 }
 
-/*.menu-icon:hover*/
 #nav-svg:hover {
     cursor: pointer;
-    /*background-color: #f08080;*/
 
     animation: nav-svg-anim;
-    /*animation-play-state: running;*/
     animation-duration: 1s;
     animation-fill-mode:both;
 }
