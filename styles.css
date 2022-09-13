@@ -317,7 +317,16 @@ background-color: #CF2500;
     display: block; 
     margin-right: auto; 
     margin-left: auto;
-}
+    background-color:antiquewhite;
+    animation-name: colorchange;
+    animation-duration: 10s;
+    border-style: none;
+  }
+  
+  @keyframes colorchange {
+    from {background-color:white;}
+    to {background-color: antiquewhite;}
+  }
 /* about page*/
 
 /* media querrys*/
@@ -364,5 +373,5 @@ background-color: #CF2500;
     }
   } 
 
+    /* media querrys*/
 
-  /* media querrys*/
