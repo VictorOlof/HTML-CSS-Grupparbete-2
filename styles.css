@@ -1,19 +1,14 @@
-/* * {
-    box-sizing: border-box;
-  }
-*/
-
-body {
-    background-color:white;
-    padding-bottom: 200px; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-
 * {
     margin: 0px;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1.6;
+}
+
+body {
+    background-color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 200px;
 }
 
 header {
@@ -25,7 +20,7 @@ header {
 /*NAVBAR CSS*/
 
 #nav-svg{
-    fill:#f08080;
+    fill:rgb(249, 222, 187);
     stroke:black;
     stroke-width:2;
     opacity:0.9
@@ -33,14 +28,12 @@ header {
 
 #nav-svg:hover {
     cursor: pointer;
-
     animation: nav-svg-anim;
     animation-duration: 1s;
     animation-fill-mode:both;
 }
 
 @keyframes nav-svg-anim {
-    
     50%{transform:rotateZ(90deg)};
 }
 
@@ -51,8 +44,11 @@ header {
     border-top:0.2rem;
 }
 
-.navbar:hover {
-    overflow:hidden;
+/*navbar has the same width as the svg so the nav is NOT hoverable
+outside the svg*/
+.navbar{
+    width:57px;
+    margin:1rem;
 }
 
 .navbar:hover .dropdown{ /*visar undermenyn*/
@@ -68,6 +64,7 @@ header {
     border-radius: 5px;
     padding:1.1rem;
     text-decoration:none;
+    list-style: none;
     background-color: aliceblue;
     box-shadow: 1px 1px 3px 0px;
     opacity:0.9;
@@ -81,6 +78,7 @@ header {
     border-radius: 5px;
     font-size: inherit;
     font-family: inherit;
+    list-style: none;
 }
 
 .products-nav:hover .second-dropdown {
@@ -118,7 +116,7 @@ header {
 
 footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: fixed;
+    position:fixed;
     bottom: 0; 
     left: 0;
     width: 100%;
@@ -205,7 +203,6 @@ fieldset {
 }
 
 .h1-home {
-
     text-align: center;
     font-size: 70px;
     margin: 0 auto;
