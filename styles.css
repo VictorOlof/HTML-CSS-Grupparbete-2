@@ -8,7 +8,6 @@
 body {
     background-color:white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-bottom: 200px;
 }
 
 header {
@@ -82,6 +81,7 @@ outside the svg*/
 }
 
 .second-dropdown {
+    position:relative;
     display: none;
     font-size: 1.5rem;
     border: black solid 0.1rem;
@@ -89,6 +89,10 @@ outside the svg*/
     font-size: inherit;
     font-family: inherit;
     list-style: none;
+}
+
+.products-nav{
+    margin-left: 2vw;
 }
 
 .products-nav:hover .second-dropdown {
@@ -126,7 +130,7 @@ outside the svg*/
 
 footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position:fixed;
+    position: relative;
     bottom: 0; 
     left: 0; 
     width: 100%;
